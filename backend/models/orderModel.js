@@ -27,7 +27,7 @@ const orderSchema = mongoose.Schema({
     },
     paymentMethod: {
         type:String,
-        required:true,
+        requirSed:true,
     },
     paymentResult: {
         id:{type:String},
@@ -59,7 +59,7 @@ const orderSchema = mongoose.Schema({
     },
    
     paidAt: {
-        type:date,
+        type:Date,
        
     },
     isDelivered: {
@@ -68,7 +68,7 @@ const orderSchema = mongoose.Schema({
         default:false
     },
     deliveredAt: {
-        type:date,
+        type:Date,
     }
 
 },{

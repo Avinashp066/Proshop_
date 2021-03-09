@@ -9,7 +9,7 @@ const products = [
     price: 12000,
     countInStock: 10,
     rating: 4.5,
-    numReviews: 12,
+    numReviews: 12
   },
   {
     name: 'iPhone 11 Pro 256GB Memory',
@@ -21,7 +21,7 @@ const products = [
     price: 66000,
     countInStock: 7,
     rating: 4.0,
-    numReviews: 8,
+    numReviews: 8
   },
   {
     name: 'Cannon EOS 80D DSLR Camera',
