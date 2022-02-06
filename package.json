@@ -20,8 +20,6 @@
   "keywords": [
     "mern"
   ],
-  "engines" : { "node" : "16.x"
-    } ,
   "author": "Avinash",
   "license": "MIT",
   "bugs": {
