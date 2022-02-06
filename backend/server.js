@@ -10,12 +10,22 @@ import userRoutes from './routes/userRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
 
-dotenv.config()
+const __dirname = path.resolve()
+
+// dotenv.config()
+// dotenv.config({path: path.resolve(__dirname, '../.env')});
+// dotenv.config({path: 'env'});
+// dotenv.config({path:'./config.env'});
+// console.log(process.env.NODE_ENV)
+// console.log(__dirname)
+
+dotenv.config({path: path.resolve(__dirname, '../.env')});
+
 
 connectDB();
 
 const app =express();
-if(process.env.NODE_ENV === 'development') {
+if(process.env.NODE_ENV == 'development') {
     app.use(morgan('dev'))
 
 }
@@ -33,11 +43,10 @@ app.use('/api/upload', uploadRoutes);
 app.get('/api/config/paypal', (req, res) => res.send(process.env.PAYPAL_CLIENT_ID))
 
 
-const __dirname = path.resolve()
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
 
-if(process.env.NODE_ENV === 'production'){
+if(process.env.NODE_ENV == 'production'){
 app.use(express.static(path.join(__dirname, '/frontend/build')))
 app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html')))
 } else {
