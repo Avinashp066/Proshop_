@@ -12,12 +12,12 @@ import uploadRoutes from './routes/uploadRoutes.js';
 
 const __dirname = path.resolve()
 
-// dotenv.config()
-// dotenv.config({path: path.resolve(__dirname, '../.env')});
-// dotenv.config({path: 'env'});
-// dotenv.config({path:'./config.env'});
-// console.log(process.env.NODE_ENV)
-// console.log(__dirname)
+dotenv.config()
+dotenv.config({path: path.resolve(__dirname, '../.env')});
+dotenv.config({path: 'env'});
+dotenv.config({path:'./config.env'});
+console.log(process.env.NODE_ENV)
+console.log(__dirname)
 
 dotenv.config({path: path.resolve(__dirname, '../.env')});
 
